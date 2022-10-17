@@ -82,7 +82,7 @@ https://forum.cfx.re/t/mlo-all-hassaric-s-maps-for-free/4776406
 	}
 
 # **qb-core/shared/jobs.lua**
-	['tequils'] = {
+	['tequila'] = {
         label = 'Tequila',
         defaultDuty = true,
         offDutyPay = false,
