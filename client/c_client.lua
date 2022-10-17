@@ -12,10 +12,8 @@ CreateThread(function()
         SetBlipAsShortRange(blip, true)
         SetBlipColour(blip, Config.Blip.Colour)
         BeginTextCommandSetBlipName("STRING")
-        AddTextComponentSubstringPlayerName(Config.Blip.Name) -- Mudar nome do Blip aqui!
+        AddTextComponentSubstringPlayerName(Config.Blip.Name) 
         EndTextCommandSetBlipName(blip)
-    else
-        return false
     end
 end)
 
