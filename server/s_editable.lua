@@ -34,10 +34,10 @@ end)
 
 
 CreateThread(function()
-    local food = { "cb_banana_nut", "cb_chocolatecup", "cb_strawberrycup", "cb_vanillacupcakes" }
+    local food = { "tq_banana_nut", "tq_chocolatecup", "tq_strawberrycup", "tq_vanillacupcakes" }
     for k,v in pairs(food) do QBCore.Functions.CreateUseableItem(v, function(source, item) TriggerClientEvent('m-Tequila:client:Eat', source, item.name) end) end
     
-    local drinks = { "cb_berry_hydrating", "cb_green_dream", "cb_island_breeze", "cb_just_peachy", "cb_watermelon_dream", "cb_ban_straw_juice", "cb_banana_juice", "cb_kiwi_juice", "cb_strawberry_juice", "cb_orange_juice", "cb_cocktail", "cb_coconut_drink", "cb_island_fantasy", "cb_kamikaze", "cb_redhot_daquiri" }
+    local drinks = { "tq_berry_hydrating", "tq_green_dream", "tq_island_breeze", "tq_just_peachy", "tq_watermelon_dream", "tq_ban_straw_juice", "tq_banana_juice", "tq_kiwi_juice", "tq_strawberry_juice", "tq_orange_juice", "tq_cocktail", "tq_coconut_drink", "tq_island_fantasy", "tq_kamikaze", "tq_redhot_daquiri" }
     for k,v in pairs(drinks) do QBCore.Functions.CreateUseableItem(v, function(source, item) TriggerClientEvent('m-Tequila:client:Drink', source, item.name) end) end
 end)
 
