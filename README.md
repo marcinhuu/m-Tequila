@@ -68,7 +68,7 @@ https://forum.cfx.re/t/mlo-all-hassaric-s-maps-for-free/4776406
 	    ["tq_kiwi_juice"] = math.random(20, 40),
 	    ["tq_strawberry_juice"] = math.random(20, 40),
 	    ["tq_orange_juice"] = math.random(20, 40),
-}
+	}
 
 	ConsumeablesEat = {
 		["tq_banana_nut"] = math.random(20, 40),
