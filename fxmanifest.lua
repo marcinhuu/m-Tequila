@@ -21,16 +21,3 @@ client_script {
     "client/**.lua",
 }
 
-escrow_ignore {
-    "images/**",
-    "configs/**.lua",
-    "Doorlocks/**",
-    "server/s_editable.lua",
-    "client/c_menus.lua",
-    "client/c_editable.lua",
-    "client/c_targets.lua",
-    "fxmanifest.lua",
-    "README.lua",
-}
-
-lua54 'yes'
