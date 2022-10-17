@@ -40,6 +40,38 @@ AddEventHandler("m-Tequila:Client:Storage", function()
     })
 end)
 
+AddEventHandler("m-Tequila:Client:OpenTray01", function()
+    TriggerEvent(Config.Stash.StashInvTrigger, "Tray01")
+    TriggerServerEvent(Config.Stash.OpenInvTrigger, "stash", "Tray01", {
+        maxweight = 500,
+        slots = 5,
+    })
+end)
+
+AddEventHandler("m-Tequila:Client:OpenTray02", function()
+    TriggerEvent(Config.Stash.StashInvTrigger, "Tray02")
+    TriggerServerEvent(Config.Stash.OpenInvTrigger, "stash", "Tray02", {
+        maxweight = 500,
+        slots = 5,
+    })
+end)
+
+AddEventHandler("m-Tequila:Client:OpenTray03", function()
+    TriggerEvent(Config.Stash.StashInvTrigger, "Tray03")
+    TriggerServerEvent(Config.Stash.OpenInvTrigger, "stash", "Tray03", {
+        maxweight = 500,
+        slots = 5,
+    })
+end)
+
+AddEventHandler("m-Tequila:Client:OpenTray04", function()
+    TriggerEvent(Config.Stash.StashInvTrigger, "Tray04")
+    TriggerServerEvent(Config.Stash.OpenInvTrigger, "stash", "Tray04", {
+        maxweight = 500,
+        slots = 5,
+    })
+end)
+
 RegisterNetEvent("m-Tequila:Client:OpenShop", function(index)
     TriggerServerEvent("inventory:server:OpenInventory", "shop", "tequila", {
         label = "tequila",

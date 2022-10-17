@@ -56,6 +56,22 @@ exports[Config.Target]:AddBoxZone("DoorUp", vector3(-561.63, 290.25, 82.18), 1.2
 exports[Config.Target]:AddBoxZone("BossMenu", vector3(-573.52, 293.96, 79.18), 2.9, 0.4, 
     { name="BossMenu", heading = 265, debugPoly = false, minZ = 75.18, maxZ = 79.18 }, 
     { options = { {  event = "qb-bossmenu:client:OpenMenu", icon = "fa-solid fa-clipboard-list", label = "Boss Menu", job = Config.Job }, },  distance = 2.0 })
+-- || ===============> Tray01
+exports[Config.Target]:AddBoxZone("Tray01", vector3(-557.0, 291.12, 82.18), 0.5, 0.5, 
+    { name="Tray01", heading = 0, debugPoly = false, minZ = 80.18, maxZ = 82.18 }, 
+    { options = { {  event = "m-Tequila:Client:OpenTray01", icon = "fa-solid fa-clipboard-list", label = "Tray" }, },  distance = 2.0 })
+-- || ===============> Tray02
+exports[Config.Target]:AddBoxZone("Tray02", vector3(-555.63, 278.98, 82.18), 0.5, 0.5, 
+    { name="Tray02", heading = 0, debugPoly = false, minZ = 80.38, maxZ = 82.38 }, 
+    { options = { {  event = "m-Tequila:Client:OpenTray02", icon = "fa-solid fa-clipboard-list", label = "Tray" }, },  distance = 2.0 })
+-- || ===============> Tray03
+exports[Config.Target]:AddBoxZone("Tray03", vector3(-561.04, 284.73, 82.18), 0.5, 0.3, 
+    { name="Tray03", heading = 355, debugPoly = false, minZ = 80.38, maxZ = 82.38 }, 
+    { options = { {  event = "m-Tequila:Client:OpenTray03", icon = "fa-solid fa-clipboard-list", label = "Tray" }, },  distance = 2.0 })
+-- || ===============> Tray04
+exports[Config.Target]:AddBoxZone("Tray04", vector3(-560.94, 286.09, 82.18), 0.5, 0.3, 
+    { name="Tray04", heading = 355, debugPoly = false, minZ = 80.38, maxZ = 82.38 }, 
+    { options = { {  event = "m-Tequila:Client:OpenTray04", icon = "fa-solid fa-clipboard-list", label = "Tray" }, },  distance = 2.0 })
 
 RegisterNetEvent('m-Tequila:Client:GoDown', function()
     local ped = PlayerPedId()
