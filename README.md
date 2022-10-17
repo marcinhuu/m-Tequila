@@ -2,6 +2,10 @@
 
 | If you are intested in recieving updates join the community on **[Discord](https://discord.gg/marcinhu)**! |
 
+# Preview
+
+https://www.youtube.com/watch?v=8Xfsxl-soy8&feature=youtu.be
+
 # Required
 
 **Map**
