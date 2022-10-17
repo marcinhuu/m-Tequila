@@ -26,7 +26,7 @@ Config.Bossmenu = "qb-bossmenu:client:OpenMenu" -- Your trigger to open boss men
 
 Config.Blip = {
 	Enable = true,
-	Location = vector3(-1202.41, -1132.75, 7.83),
+	Location = vector3(-563.2, 285.68, 82.18),
 	Sprite = 266,
 	Display = 2,
 	Scale = 0.8,
