@@ -10,7 +10,6 @@ https://forum.cfx.re/t/mlo-all-hassaric-s-maps-for-free/4776406
 
 **qb-core/shared/items.lua**
 ```
-
     -- m-Tequila
 	["tq_berry_hydrating"] 		= {["name"] = "tq_berry_hydrating", 		["label"] = "Berry Hydrating", 			 ["weight"] = 50, 	["type"] = "item", 	["image"] = "tq_berry_hydrating.png", 		["unique"] = false,   	["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = ""},
 	["tq_cake"] 				= {["name"] = "tq_cake", 					["label"] = "Cake", 			 		 ["weight"] = 50, 	["type"] = "item", 	["image"] = "tq_cake.png", 					["unique"] = false,   	["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = ""},
@@ -49,13 +48,7 @@ https://forum.cfx.re/t/mlo-all-hassaric-s-maps-for-free/4776406
 	["tq_watermelon"] 		= {["name"] = "tq_watermelon", 					["label"] = "Watermelon", 			 	["weight"] = 50, 	["type"] = "item", 	["image"] = "tq_watermelon.png", 			["unique"] = false,   	["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = ""},
 	["tq_banana"] 			= {["name"] = "tq_banana", 						["label"] = "Banana", 			 		["weight"] = 50, 	["type"] = "item", 	["image"] = "tq_banana.png", 				["unique"] = false,   	["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = ""},
 	["tq_coconut"] 			= {["name"] = "tq_coconut", 					["label"] = "Coconut", 			 		["weight"] = 50, 	["type"] = "item", 	["image"] = "tq_coconut.png", 				["unique"] = false,   	["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = ""},
-
-
-
-
-
 ```
-
 # **qb-smallresources/config.lua**
 	ConsumeablesDrink = {
 	    ["tq_berry_hydrating"] = math.random(20, 40),
@@ -85,7 +78,6 @@ https://forum.cfx.re/t/mlo-all-hassaric-s-maps-for-free/4776406
 	}
 
 # **qb-core/shared/jobs.lua**
-
 	['tequils'] = {
         label = 'Tequila',
         defaultDuty = true,
