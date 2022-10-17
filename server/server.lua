@@ -24,7 +24,6 @@ end)
 
 QBCore.Functions.CreateCallback('m-Tequila:server:Materials', function(source, cb, materials)
     local src = source
-    local hasItems = false
     local tem = 0
     local player = QBCore.Functions.GetPlayer(source)
     for k, v in pairs(materials) do
