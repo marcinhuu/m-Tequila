@@ -205,8 +205,8 @@ Config.Alcoholic = {
         label = "Kamikaze",
         materials = {
             [1] = { item = "tq_water",       amount = 1 },
-            [3] = { item = "tq_sugar",       amount = 1 },
-            [4] = { item = "tq_tequila",     amount = 1 },
+            [2] = { item = "tq_sugar",       amount = 1 },
+            [3] = { item = "tq_tequila",     amount = 1 },
         }
     },
     ["tq_redhot_daquiri"] = { 
