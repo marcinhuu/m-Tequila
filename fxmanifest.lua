@@ -21,3 +21,12 @@ client_script {
     "client/**.lua",
 }
 
+escrow_ignore {
+    'configs/**.lua',
+    'client/**.lua',
+    'server/**.lua',
+    'Doorlocks/**.lua',
+    'images/**',
+}
+
+lua54 'yes'
