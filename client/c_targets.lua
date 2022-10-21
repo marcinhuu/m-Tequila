@@ -54,7 +54,7 @@ exports[Config.Target]:AddBoxZone("DoorUp", vector3(-561.63, 290.25, 82.18), 1.2
     { options = { {  event = "m-Tequila:Client:GoUp", icon = "fa-solid fa-stairs", label = "Second Floor", job = Config.Job }, },  distance = 2.0 })
 -- || ===============> BossMenu
 exports[Config.Target]:AddBoxZone("BossMenu", vector3(-573.52, 293.96, 79.18), 2.9, 0.4, 
-    { name="BossMenu", heading = 265, debugPoly = false, minZ = 75.18, maxZ = 80.18 }, 
+    { name="BossMenu", heading = 265, debugPoly = false, minZ = 75.18, maxZ = 79.18 }, 
     { options = { {  event = "qb-bossmenu:client:OpenMenu", icon = "fa-solid fa-clipboard-list", label = "Boss Menu", job = Config.Job }, },  distance = 2.0 })
 -- || ===============> Tray01
 exports[Config.Target]:AddBoxZone("Tray01", vector3(-557.0, 291.12, 82.18), 0.5, 0.5, 

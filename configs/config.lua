@@ -80,6 +80,7 @@ Config.Items = {
     [6] = { name = "tq_sugar", price = 0, amount = 10, info = {}, type = "item", slot = 6, },
     [7] = { name = "tq_strawberry", price = 0, amount = 10, info = {}, type = "item", slot = 7, },
     [8] = { name = "tq_watermelon", price = 0, amount = 10, info = {}, type = "item", slot = 8, },
+    [9] = { name = "tq_water", price = 0, amount = 10, info = {}, type = "item", slot = 9, },
 }
 
 -- ░█████╗░██████╗░░█████╗░███████╗████████╗░██████╗
@@ -205,8 +206,8 @@ Config.Alcoholic = {
         label = "Kamikaze",
         materials = {
             [1] = { item = "tq_water",       amount = 1 },
-            [2] = { item = "tq_sugar",       amount = 1 },
-            [3] = { item = "tq_tequila",     amount = 1 },
+            [3] = { item = "tq_sugar",       amount = 1 },
+            [4] = { item = "tq_tequila",     amount = 1 },
         }
     },
     ["tq_redhot_daquiri"] = { 
