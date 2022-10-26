@@ -52,6 +52,9 @@ https://forum.cfx.re/t/mlo-all-hassaric-s-maps-for-free/4776406
 	["tq_watermelon"] 		= {["name"] = "tq_watermelon", 					["label"] = "Watermelon", 			 	["weight"] = 50, 	["type"] = "item", 	["image"] = "tq_watermelon.png", 			["unique"] = false,   	["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = ""},
 	["tq_banana"] 			= {["name"] = "tq_banana", 						["label"] = "Banana", 			 		["weight"] = 50, 	["type"] = "item", 	["image"] = "tq_banana.png", 				["unique"] = false,   	["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = ""},
 	["tq_coconut"] 			= {["name"] = "tq_coconut", 					["label"] = "Coconut", 			 		["weight"] = 50, 	["type"] = "item", 	["image"] = "tq_coconut.png", 				["unique"] = false,   	["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = ""},
+	["tq_banana_nut"] 		= {["name"] = "tq_banana_nut", 					["label"] = "banana nut", 			 	["weight"] = 50, 	["type"] = "item", 	["image"] = "tq_banana_nut.png", 			["unique"] = false,   	["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = ""},
+	["tq_chocolatecup"] 			= {["name"] = "tq_chocolatecup", 						["label"] = "chocolatecup", 			 		["weight"] = 50, 	["type"] = "item", 	["image"] = "tq_chocolatecup.png", 				["unique"] = false,   	["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = ""},
+	["tq_strawberrycup"] 			= {["name"] = "tq_strawberrycup", 					["label"] = "Cocotq strawberrycupnut", 			 		["weight"] = 50, 	["type"] = "item", 	["image"] = "tq_strawberrycup.png", 				["unique"] = false,   	["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = ""},
 ```
 # **qb-smallresources/config.lua**
 	ConsumeablesDrink = {
