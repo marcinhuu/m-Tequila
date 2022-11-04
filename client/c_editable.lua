@@ -47,7 +47,7 @@ RegisterNetEvent('m-Tequila:client:DrinkAlcahol', function(itemName)
     }, {}, {}, {}, function()
         TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items[itemName], "remove", 1)
         TriggerEvent('animations:client:EmoteCommandStart', {"c"})
-        TriggerServerEvent("Ranjit-Skybar:Server:RemoveItem", itemName, 1)
+        TriggerServerEvent("m-Tequila:Server:RemoveItem", itemName, 1)
         if QBCore.Shared.Items[itemName].thirst then TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + QBCore.Shared.Items[itemName].thirst) end
         if QBCore.Shared.Items[itemName].hunger then TriggerServerEvent("QBCore:Server:SetMetaData", "hunger", QBCore.Functions.GetPlayerData().metadata["hunger"] + QBCore.Shared.Items[itemName].hunger) end
         if not QBCore.Shared.Items[itemName].thirst and not QBCore.Shared.Items[itemName].hunger then

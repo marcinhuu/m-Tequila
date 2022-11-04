@@ -28,15 +28,15 @@ Language = {
         Required = "Required:",
     },
     Notify = {
-        Make = "You make: ",
+        Make = "You made: ",
         Canceled = "Canceled",
-        NoMaterials = "You don't have the necessary materials",
+        NoMaterials = "You don't have the necessary crafts",
         Send = "Invoice sent successfully.",
         HigherValue = "Must be a valid value above 0.",
         InvoiceOwn = "You can't bill yourself.",
         PlayerOffline = "Player unavailable.",
-        NoPermission = "You don't have permissions.",
+        NoPermission = "You don't have permission.",
         InvoiceReceived = "New invoice received.",
-        AlreadySit = "Somebody already sit there."
+        AlreadySit = "Somebody already sitting there."
     }
 }
