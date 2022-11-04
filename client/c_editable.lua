@@ -97,25 +97,3 @@ function AlienEffect()
     StopScreenEffect("DrugsMichaelAliensFight")
     StopScreenEffect("DrugsMichaelAliensFightOut")
 end
---Weed Effects
-function WeedEffect()
-    StartScreenEffect("DrugsMichaelAliensFightIn", 3.0, 0)
-    Wait(math.random(3000, 20000))
-    StartScreenEffect("DrugsMichaelAliensFight", 3.0, 0)
-    Wait(math.random(15000, 20000))
-    StartScreenEffect("DrugsMichaelAliensFightOut", 3.0, 0)
-    StopScreenEffect("DrugsMichaelAliensFightIn")
-    StopScreenEffect("DrugsMichaelAliensFight")
-    StopScreenEffect("DrugsMichaelAliensFightOut")
-end
---Other Effects
-function TrevorEffect()
-    StartScreenEffect("DrugsTrevorClownsFightIn", 3.0, 0)
-    Wait(3000)
-    StartScreenEffect("DrugsTrevorClownsFight", 3.0, 0)
-    Wait(30000)
-	StartScreenEffect("DrugsTrevorClownsFightOut", 3.0, 0)
-	StopScreenEffect("DrugsTrevorClownsFight")
-	StopScreenEffect("DrugsTrevorClownsFightIn")
-	StopScreenEffect("DrugsTrevorClownsFightOut")
-end    
