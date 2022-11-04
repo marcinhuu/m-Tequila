@@ -17,6 +17,7 @@ Config.Input = "qb-input" -- Name of your resource qb-input
 Config.InvLink = "lj-inventory/html/images/" -- Your directory images inventory
 Config.Bossmenu = "qb-bossmenu:client:OpenMenu" -- Your trigger to open boss menu
 
+
 -- ██████╗░██╗░░░░░██╗██████╗░
 -- ██╔══██╗██║░░░░░██║██╔══██╗
 -- ██████╦╝██║░░░░░██║██████╔╝
@@ -83,6 +84,7 @@ Config.Items = {
     [9] = { name = "tq_water", price = 0, amount = 10, info = {}, type = "item", slot = 9, },
 }
 
+
 -- ░█████╗░██████╗░░█████╗░███████╗████████╗░██████╗
 -- ██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔════╝
 -- ██║░░╚═╝██████╔╝███████║█████╗░░░░░██║░░░╚█████╗░
@@ -92,8 +94,8 @@ Config.Items = {
 
 -- Craft non-alcoholic drinks
 Config.NonAlcoholic = {
-    ["tq_berry_hydrating"] = { 
-        hash = "tq_berry_hydrating", 
+    ["tq_berry_hydrating"] = {
+        hash = "tq_berry_hydrating",
         label = "Hydrating",
         materials = {
             [1] = { item = "tq_water",      amount = 1 },
@@ -101,8 +103,8 @@ Config.NonAlcoholic = {
             [3] = { item = "tq_sugar",      amount = 1 },
         }
     },
-    ["tq_green_dream"] = { 
-        hash = "tq_green_dream", 
+    ["tq_green_dream"] = {
+        hash = "tq_green_dream",
         label = "Green Dream",
         materials = {
             [1] = { item = "tq_water",       amount = 1 },
@@ -110,8 +112,8 @@ Config.NonAlcoholic = {
             [3] = { item = "tq_sugar",       amount = 1 },
         }
     },
-    ["tq_island_breeze"] = { 
-        hash = "tq_island_breeze", 
+    ["tq_island_breeze"] = {
+        hash = "tq_island_breeze",
         label = "Island Breeze",
         materials = {
             [1] = { item = "tq_strawberry",  amount = 2 },
@@ -119,8 +121,8 @@ Config.NonAlcoholic = {
             [3] = { item = "tq_water",       amount = 2 },
         }
     },
-    ["tq_just_peachy"] = { 
-        hash = "tq_just_peachy", 
+    ["tq_just_peachy"] = {
+        hash = "tq_just_peachy",
         label = "Just Peachy",
         materials = {
             [1] = { item = "tq_water",       amount = 1 },
@@ -128,8 +130,8 @@ Config.NonAlcoholic = {
             [3] = { item = "tq_sugar",       amount = 1 },
         }
     },
-    ["tq_watermelon_dream"] = { 
-        hash = "tq_watermelon_dream", 
+    ["tq_watermelon_dream"] = {
+        hash = "tq_watermelon_dream",
         label = "Watermelon Dream",
         materials = {
             [1] = { item = "tq_water",    amount = 2 },
@@ -137,29 +139,29 @@ Config.NonAlcoholic = {
             [3] = { item = "tq_watermelon",         amount = 1 },
         }
     },
-    ["tq_kiwi_juice"] = { 
-        hash = "tq_kiwi_juice", 
+    ["tq_kiwi_juice"] = {
+        hash = "tq_kiwi_juice",
         label = "Kiwi Juice",
         materials = {
             [1] = { item = "tq_kiwi",    amount = 1 },
         }
     },
-    ["tq_orange_juice"] = { 
-        hash = "tq_orange_juice", 
+    ["tq_orange_juice"] = {
+        hash = "tq_orange_juice",
         label = "Orange Juice",
         materials = {
             [1] = { item = "tq_orange",    amount = 1 },
         }
     },
-    ["tq_strawberry_juice"] = { 
-        hash = "tq_strawberry_juice", 
+    ["tq_strawberry_juice"] = {
+        hash = "tq_strawberry_juice",
         label = "Strawberry Juice",
         materials = {
             [1] = { item = "tq_strawberry",    amount = 1 },
         }
     },
-    ["tq_banana_juice"] = { 
-        hash = "tq_banana_juice", 
+    ["tq_banana_juice"] = {
+        hash = "tq_banana_juice",
         label = "Banana Juice",
         materials = {
             [1] = { item = "tq_banana",    amount = 1 },
@@ -171,8 +173,8 @@ Config.NonAlcoholic = {
 -- Craft alcoholic drinks
 
 Config.Alcoholic = {
-    ["tq_cocktail"] = { 
-        hash = "tq_cocktail", 
+    ["tq_cocktail"] = {
+        hash = "tq_cocktail",
         label = "Cocktail",
         materials = {
             [1] = { item = "tq_water",      amount = 1 },
@@ -181,8 +183,8 @@ Config.Alcoholic = {
             [4] = { item = "tq_tequila",     amount = 1 },
         }
     },
-    ["tq_coconut_drink"] = { 
-        hash = "tq_coconut_drink", 
+    ["tq_coconut_drink"] = {
+        hash = "tq_coconut_drink",
         label = "Coconut Drink",
         materials = {
             [1] = { item = "tq_water",       amount = 1 },
@@ -191,8 +193,8 @@ Config.Alcoholic = {
             [4] = { item = "tq_tequila",     amount = 1 },
         }
     },
-    ["tq_island_fantasy"] = { 
-        hash = "tq_island_fantasy", 
+    ["tq_island_fantasy"] = {
+        hash = "tq_island_fantasy",
         label = "Island Fantasy",
         materials = {
             [1] = { item = "tq_orange",      amount = 1 },
@@ -201,8 +203,8 @@ Config.Alcoholic = {
             [4] = { item = "tq_tequila",     amount = 1 },
         }
     },
-    ["tq_kamikaze"] = { 
-        hash = "tq_kamikaze", 
+    ["tq_kamikaze"] = {
+        hash = "tq_kamikaze",
         label = "Kamikaze",
         materials = {
             [1] = { item = "tq_water",       amount = 1 },
@@ -210,8 +212,8 @@ Config.Alcoholic = {
             [4] = { item = "tq_tequila",     amount = 1 },
         }
     },
-    ["tq_redhot_daquiri"] = { 
-        hash = "tq_redhot_daquiri", 
+    ["tq_redhot_daquiri"] = {
+        hash = "tq_redhot_daquiri",
         label = "Red Hot Daquiri",
         materials = {
             [1] = { item = "tq_water",           amount = 1 },
@@ -221,4 +223,3 @@ Config.Alcoholic = {
         }
     },
 }
-
