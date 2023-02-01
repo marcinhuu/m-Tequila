@@ -223,3 +223,36 @@ Config.Alcoholic = {
         }
     },
 }
+
+
+Consumablesfood = {
+    ["frozenyogurt"] = math.random(20, 20),
+    ["tornedo"] = math.random(30, 30),
+    ["wafels"] = math.random(40, 40),
+    ["brownies"] = math.random(50, 50),
+    ["crabcakes"] = math.random(60, 60),
+    ["tq_banana_nut"] = math.random(20, 40),
+    ["tq_chocolatecup"] = math.random(20, 40),
+    ["tq_strawberrycup"] = math.random(20, 40),
+}
+
+Consumablestqdrinks = {
+    ["tq_berry_hydrating"] = math.random(20, 40),
+    ["tq_green_dream"] = math.random(20, 40),
+    ["tq_island_breeze"] = math.random(20, 40),
+    ["tq_just_peachy"] = math.random(20, 40),
+    ["tq_watermelon_dream"] = math.random(20, 40),
+    ["tq_ban_straw_juice"] = math.random(20, 40),
+    ["tq_banana_juice"] = math.random(20, 40),
+    ["tq_kiwi_juice"] = math.random(20, 40),
+    ["tq_strawberry_juice"] = math.random(50, 50),
+    ["tq_orange_juice"] = math.random(20, 40),
+}
+
+Consumablesalcodrinks = {
+    ["tq_cocktail"] = math.random(50, 50),
+    ["tq_coconut_drink"] = math.random(40, 40),
+    ["tq_island_fantasy"] = math.random(30, 30),
+    ["tq_kamikaze"] = math.random(20, 20),
+    ["tq_redhot_daquiri"] = math.random(20, 20),
+}

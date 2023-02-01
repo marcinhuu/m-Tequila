@@ -1,6 +1,4 @@
 local QBCore = exports[Config.CoreName]:GetCoreObject()
-local alcoholCount = 0
-
 
 RegisterNetEvent('m-Tequila:client:Eat', function(itemName)
     TriggerEvent('animations:client:EmoteCommandStart', {"burger"}) -- Animation Eating
@@ -13,7 +11,7 @@ RegisterNetEvent('m-Tequila:client:Eat', function(itemName)
         if QBCore.Shared.Items[itemName].thirst then TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + QBCore.Shared.Items[itemName].thirst) end
         if QBCore.Shared.Items[itemName].hunger then TriggerServerEvent("QBCore:Server:SetMetaData", "hunger", QBCore.Functions.GetPlayerData().metadata["hunger"] + QBCore.Shared.Items[itemName].hunger) end
         if not QBCore.Shared.Items[itemName].thirst and not QBCore.Shared.Items[itemName].hunger then
-            TriggerServerEvent("QBCore:Server:SetMetaData", "hunger", QBCore.Functions.GetPlayerData().metadata["hunger"] + math.random(10,20))
+            TriggerServerEvent("QBCore:Server:SetMetaData", "hunger", QBCore.Functions.GetPlayerData().metadata["hunger"] + Consumablesfood[itemName])
         end
         TriggerServerEvent('hud:server:RelieveStress', math.random(2, 4))
     end, function() -- Cancel
@@ -32,7 +30,7 @@ RegisterNetEvent('m-Tequila:client:Drink', function(itemName)
         if QBCore.Shared.Items[itemName].thirst then TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + QBCore.Shared.Items[itemName].thirst) end
         if QBCore.Shared.Items[itemName].hunger then TriggerServerEvent("QBCore:Server:SetMetaData", "hunger", QBCore.Functions.GetPlayerData().metadata["hunger"] + QBCore.Shared.Items[itemName].hunger) end
         if not QBCore.Shared.Items[itemName].thirst and not QBCore.Shared.Items[itemName].hunger then
-            TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + math.random(10,20))
+            TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + Consumablestqdrinks[itemName])
         end
         TriggerServerEvent('hud:server:RelieveStress', math.random(2, 4))
     end, function() -- Cancel
@@ -40,30 +38,29 @@ RegisterNetEvent('m-Tequila:client:Drink', function(itemName)
     end, itemName)
 end)
 
-RegisterNetEvent('m-Tequila:client:DrinkAlcahol', function(itemName)
-    TriggerEvent('animations:client:EmoteCommandStart', {"whiskey"}) -- Animation Drinking
+RegisterNetEvent('m-Tequila:client:DrinkAlchol', function(itemName)
+    TriggerEvent('animations:client:EmoteCommandStart', {"coffee"}) -- Animation Drinking
     QBCore.Functions.Progressbar("drink_something", Language.Progressbars.Drinking..QBCore.Shared.Items[itemName].label.."..", 5000, false, true, {
         disableMovement = false, disableCarMovement = false, disableMouse = false, disableCombat = true,
     }, {}, {}, {}, function()
+        TriggerServerEvent("m-Tequila:Server:RemoveItem", itemName, 1)
         TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items[itemName], "remove", 1)
         TriggerEvent('animations:client:EmoteCommandStart', {"c"})
-        TriggerServerEvent("m-Tequila:Server:RemoveItem", itemName, 1)
+        TriggerEvent("evidence:client:SetStatus", "alcohol", 100)
+        TriggerEvent("evidence:client:SetStatus", "heavyalcohol", 100)
+        AlienEffect()
         if QBCore.Shared.Items[itemName].thirst then TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + QBCore.Shared.Items[itemName].thirst) end
         if QBCore.Shared.Items[itemName].hunger then TriggerServerEvent("QBCore:Server:SetMetaData", "hunger", QBCore.Functions.GetPlayerData().metadata["hunger"] + QBCore.Shared.Items[itemName].hunger) end
         if not QBCore.Shared.Items[itemName].thirst and not QBCore.Shared.Items[itemName].hunger then
-            TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + math.random(10,20))
+            TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + Consumablesalcodrinks[itemName])
         end
-        alcoholCount = alcoholCount + 1
-        if alcoholCount > 1 and alcoholCount < 4 then TriggerEvent("evidence:client:SetStatus", "alcohol", 200)
-        elseif alcoholCount >= 4 then TriggerEvent("evidence:client:SetStatus", "heavyalcohol", 200)
-        AlienEffect()
-        end
-        
-	end, function() -- Cancel
-	    TriggerEvent('animations:client:EmoteCommandStart', {"c"})
+        TriggerServerEvent('hud:server:RelieveStress', math.random(2, 4))
+    end, function() -- Cancel
+        TriggerEvent('animations:client:EmoteCommandStart', {"c"})
     end, itemName)
 end)
-   --Alcohol Effects
+
+--Alcohol Effects
 function AlienEffect()
     StartScreenEffect("DrugsMichaelAliensFightIn", 3.0, 0)
     Wait(math.random(5000, 8000))
