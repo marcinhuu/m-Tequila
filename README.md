@@ -1,3 +1,5 @@
+![Logo](https://media.discordapp.net/attachments/1019726083827961956/1080652557246013510/tequila.png)
+
 # m-Tequila script for QB-Core
 
 | If you are intested in recieving updates join the community on **[Discord](https://discord.gg/marcinhu)**! |
