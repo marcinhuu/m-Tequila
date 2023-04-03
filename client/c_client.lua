@@ -85,10 +85,17 @@ AddEventHandler('m-Tequila:Client:Sentar', function()
 end)
 
 -- || ===============> Faturar
- 
+if Config.Payments == 'jimpayments' then
+    TriggerEvent('jim-payments:client:Charge', { label = "charge", job = Config.Job })
+elseif Config.Payments == 'okokbilling' then
+    TriggerEvent("okokBilling:OpenCreateInvoice")
+end
+
 RegisterNetEvent('m-Tequila:Client:Faturamento', function()
-    if Config.JimPayments then
-        TriggerEvent("jim-payments:client:Charge", Config.Job)
+    if Config.Payments == 'jimpayments' then
+        TriggerEvent('jim-payments:client:Charge', { label = "charge", job = Config.Job })
+    elseif Config.Payments == 'okokbilling' then
+        TriggerEvent("okokBilling:OpenCreateInvoice")
     else
         local dialog = exports[Config.Input]:ShowInput({
             header = Language.Input.Header,
@@ -106,8 +113,10 @@ RegisterNetEvent('m-Tequila:Client:Faturamento', function()
 end)
 
 if Config.Billing.EnableCommand then
-    if Config.JimPayments then
-        TriggerEvent("jim-payments:client:Charge", Config.Job)
+    if Config.Payments == 'jimpayments' then
+        TriggerEvent('jim-payments:client:Charge', { label = "charge", job = Config.Job })
+    elseif Config.Payments == 'okokbilling' then
+        TriggerEvent("okokBilling:OpenCreateInvoice")
     else
         RegisterCommand(Config.Billing.Command, function()
             local dialog = exports[Config.Input]:ShowInput({

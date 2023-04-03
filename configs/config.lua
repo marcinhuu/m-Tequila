@@ -11,7 +11,7 @@ Config = {}
 
 Config.CoreName = "qb-core" -- Core name
 Config.Job = "tequila" -- Job
-Config.JimPayments = false -- Using jim-payments?
+Config.Payments = "jimpayments" -- jimpayments OR okokbilling
 Config.Target = "qb-target" -- Name of your resource qb-target
 Config.Input = "qb-input" -- Name of your resource qb-input
 Config.InvLink = "lj-inventory/html/images/" -- Your directory images inventory
