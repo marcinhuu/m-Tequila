@@ -85,16 +85,17 @@ AddEventHandler('m-Tequila:Client:Sentar', function()
 end)
 
 -- || ===============> Faturar
- 
 RegisterNetEvent('m-Tequila:Client:Faturamento', function()
-    if Config.JimPayments then
-        TriggerEvent("jim-payments:client:Charge", Config.Job)
+    if Config.Payments == 'jimpayments' then
+        TriggerEvent('jim-payments:client:Charge', { label = "charge", job = Config.Job })
+    elseif Config.Payments == 'okokbilling' then
+        TriggerEvent("okokBilling:ToggleCreateInvoice")
     else
         local dialog = exports[Config.Input]:ShowInput({
             header = Language.Input.Header,
             submitText = Language.Input.Submit,
             inputs = {
-                { type = 'number', isRequired = true, name = 'id', text = Language.Input.Paypal },
+                { type = 'number', isRequired = true, name = 'id',     text = Language.Input.Paypal },
                 { type = 'number', isRequired = true, name = 'amount', text = Language.Input.Amount }
             }
         })
@@ -106,15 +107,17 @@ RegisterNetEvent('m-Tequila:Client:Faturamento', function()
 end)
 
 if Config.Billing.EnableCommand then
-    if Config.JimPayments then
-        TriggerEvent("jim-payments:client:Charge", Config.Job)
+    if Config.Payments == 'jimpayments' then
+        TriggerEvent('jim-payments:client:Charge', { label = "charge", job = Config.Job })
+    elseif Config.Payments == 'okokbilling' then
+        TriggerEvent("okokBilling:ToggleCreateInvoice")
     else
         RegisterCommand(Config.Billing.Command, function()
             local dialog = exports[Config.Input]:ShowInput({
                 header = Language.Input.Header,
                 submitText = Language.Input.Submit,
                 inputs = {
-                    { type = 'number', isRequired = true, name = 'id', text = Language.Input.Paypal },
+                    { type = 'number', isRequired = true, name = 'id',     text = Language.Input.Paypal },
                     { type = 'number', isRequired = true, name = 'amount', text = Language.Input.Amount }
                 }
             })
