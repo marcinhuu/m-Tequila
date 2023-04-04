@@ -87,9 +87,24 @@ end)
 -- || ===============> Faturar
  
 RegisterNetEvent('m-Tequila:Client:Faturamento', function()
-    if Config.JimPayments then
+    if Config.BillingType == "jim" then
         TriggerEvent("jim-payments:client:Charge", Config.Job)
-    else
+    elseif Config.BillingType == "okok" then
+        local dialog = exports[Config.Input]:ShowInput({
+            header = Language.Input.Header,
+            submitText = Language.Input.Submit,
+            inputs = {
+                { type = 'number', isRequired = true, name = 'id', text = Language.Input.Paypal },
+                { type = 'number', isRequired = true, name = 'amount', text = Language.Input.Amount },
+                { type = 'text', isRequired = true, name = 'reason', text = Language.Input.Reason },
+
+            }
+        })
+        if dialog then
+            if not dialog.id or not dialog.amount or not dialog.reason then return end
+            TriggerServerEvent("okokBilling:CreateCustomInvoice", dialog.id, dialog.amount, dialog.reason, "tequila", "tequila", "tequila")
+        end
+    elseif Config.BillingType == "qb" then
         local dialog = exports[Config.Input]:ShowInput({
             header = Language.Input.Header,
             submitText = Language.Input.Submit,
@@ -106,9 +121,28 @@ RegisterNetEvent('m-Tequila:Client:Faturamento', function()
 end)
 
 if Config.Billing.EnableCommand then
-    if Config.JimPayments then
-        TriggerEvent("jim-payments:client:Charge", Config.Job)
-    else
+    if Config.Billing == "jim" then
+        RegisterCommand(Config.Billing.Command, function()
+            TriggerEvent("jim-payments:client:Charge", Config.Job)
+        end)
+    elseif Config.Billing == "okok" then
+        RegisterCommand(Config.Billing.Command, function()
+            local dialog = exports[Config.Input]:ShowInput({
+                header = Language.Input.Header,
+                submitText = Language.Input.Submit,
+                inputs = {
+                    { type = 'number', isRequired = true, name = 'id', text = Language.Input.Paypal },
+                    { type = 'number', isRequired = true, name = 'amount', text = Language.Input.Amount },
+                    { type = 'text', isRequired = true, name = 'reason', text = Language.Input.Reason },
+
+                }
+            })
+            if dialog then
+                if not dialog.id or not dialog.amount or not dialog.reason then return end
+                TriggerServerEvent("okokBilling:CreateCustomInvoice", dialog.id, dialog.amount, dialog.reason, "tequila", "tequila", "tequila")
+            end
+        end)
+    elseif Config.Billing == "qb" then
         RegisterCommand(Config.Billing.Command, function()
             local dialog = exports[Config.Input]:ShowInput({
                 header = Language.Input.Header,

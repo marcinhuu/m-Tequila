@@ -6,6 +6,7 @@ Language = {
         Submit = "Submit",
         Paypal = "Paypal ID",
         Amount = "Amount",
+        Reason = "Reason",
     },
     Progressbars = {
         Eating = "Eating...",
