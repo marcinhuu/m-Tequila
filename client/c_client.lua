@@ -95,7 +95,7 @@ RegisterNetEvent('m-Tequila:Client:Faturamento', function()
             header = Language.Input.Header,
             submitText = Language.Input.Submit,
             inputs = {
-                { type = 'number', isRequired = true, name = 'id', text = Language.Input.Paypal },
+                { type = 'number', isRequired = true, name = 'id',     text = Language.Input.Paypal },
                 { type = 'number', isRequired = true, name = 'amount', text = Language.Input.Amount }
             }
         })
@@ -117,7 +117,7 @@ if Config.Billing.EnableCommand then
                 header = Language.Input.Header,
                 submitText = Language.Input.Submit,
                 inputs = {
-                    { type = 'number', isRequired = true, name = 'id', text = Language.Input.Paypal },
+                    { type = 'number', isRequired = true, name = 'id',     text = Language.Input.Paypal },
                     { type = 'number', isRequired = true, name = 'amount', text = Language.Input.Amount }
                 }
             })
