@@ -2,7 +2,7 @@
 
 # m-Tequila script for QB-Core
 
-| If you are intested in recieving updates join the community on **[Discord](https://discord.gg/marcinhu)**! |
+| If you are intested in recieving updates join the community here at **[Discord](https://discord.gg/marcinhu)**! |
 
 # Preview
 

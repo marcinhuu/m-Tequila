@@ -80,12 +80,8 @@ RegisterNetEvent("m-Tequila:Client:OpenShop", function(index)
     })
 end);
 
-AddEventHandler('m-Tequila:Client:Sentar', function()
-    TriggerEvent('animations:client:EmoteCommandStart', {"sitchair"})
-end)
+-- || ===============> Invoice
 
--- || ===============> Faturar
- 
 RegisterNetEvent('m-Tequila:Client:Faturamento', function()
     if Config.BillingType == "jim" then
         TriggerEvent("jim-payments:client:Charge", Config.Job)
@@ -173,7 +169,7 @@ function CraftNonAlcoholicMenu()
         item.params = { event = 'm-Tequila:client:CraftNonAlcoholic', args = { type = k } }
         table.insert(columns, item)
     end
-    exports['qb-menu']:openMenu(columns)
+    exports[Config.Menu]:openMenu(columns)
 end
 
 function CraftNonAlcoholic(weapon)
@@ -217,7 +213,7 @@ function CraftAlcoholicMenu()
         item.params = { event = 'm-Tequila:client:CraftAlcoholic', args = { type = k } }
         table.insert(columns, item)
     end
-    exports['qb-menu']:openMenu(columns)
+    exports[Config.Menu]:openMenu(columns)
 end
 
 function CraftAlcoholic(weapon)
@@ -246,14 +242,4 @@ RegisterNetEvent('m-Tequila:client:CraftAlcoholic', function(data)
             return
         end
     end, Config.Alcoholic[data.type].materials)
-end)
-
-RegisterNetEvent('m-Tequila:Client:GiveCoffee', function()
-    LocalPlayer.state:set("inv_busy", true, true)
-    QBCore.Functions.Progressbar("PutMask", Language.Progressbars.Coffee, 5000, false, true, {disableMovement = true,disableCarMovement = true,disableMouse = false,
-    disableCombat = true}, {animDict = "anim@amb@nightclub@mini@drinking@drinking_shots@ped_a@normal",anim = "pour_one",flags = 49}, {}, {}, function()
-    LocalPlayer.state:set("inv_busy", false, true)
-    end)
-    Wait(5000)
-    TriggerServerEvent('m-Tequila:Server:GiveCoffee')
 end)

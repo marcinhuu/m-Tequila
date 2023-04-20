@@ -10,11 +10,12 @@ Config = {}
 -- ░╚═════╝░░░░╚═╝░░░╚═╝╚══════╝╚═╝░░░╚═╝░░░░░░╚═╝░░░
 
 Config.CoreName = "qb-core" -- Core name
-Config.Job = "tequila" -- Job
-Config.BillingType = "okok" -- "qb" , "jim", "okok"
-Config.Target = "qb-target" -- Name of your resource qb-target
-Config.Input = "qb-input" -- Name of your resource qb-input
-Config.InvLink = "lj-inventory/html/images/" -- Your directory images inventory
+Config.Job = "tequila" -- Job required
+Config.BillingType = "okok" -- "qb", "jim", "okok"
+Config.Target = "qb-target" -- Name of your target resource
+Config.Input = "qb-input" -- Name of your input resource
+Config.Menu = "qb-menu" -- Name of your menu resource
+Config.InvLink = "qb-inventory/html/images/" -- Your directory images inventory
 Config.Bossmenu = "qb-bossmenu:client:OpenMenu" -- Your trigger to open boss menu
 
 
@@ -61,7 +62,7 @@ Config.Stash = {
 
 Config.Billing = {
 	EnableCommand = true,
-	Command = "billingtequila",
+	Command = "tequilabill",
 }
 
 
