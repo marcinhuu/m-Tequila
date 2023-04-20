@@ -11,10 +11,7 @@ Language = {
     Progressbars = {
         Eating = "Eating...",
         Drinking = "Drinking...",
-        Make = "Making...",
-        Fruit = "Taking fruit...",
-        Coffee = "Taking coffee...",
-        Ticket = "Taking a ticket..."
+        Make = "Making..."
     },
     Menu = {
         NonAlcoholic = "[🍹] Non Alcoholic Drinks",
@@ -38,6 +35,6 @@ Language = {
         PlayerOffline = "Player unavailable.",
         NoPermission = "You don't have permission.",
         InvoiceReceived = "New invoice received.",
-        AlreadySit = "Somebody already sitting there."
+        AlreadySit = "Somebody is already sitting there."
     }
 }
